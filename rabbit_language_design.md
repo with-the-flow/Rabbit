@@ -119,19 +119,16 @@ double r = sqrt(2.0);
 #### 统一错误类型
 ```rabbit
 # 内置错误类型
-try {
+try:
     data = json.parse(invalid_json)
-} catch ParseError as e {
+except ParseError as e:
     print("JSON解析失败:", e.message)
-}
 
 # 自定义错误
-def divide(a, b) {
-    if b == 0 {
+rdef divide(a, b):
+    if b == 0:
         throw ValueError("除数不能为零")
-    }
     a / b
-}
 ```
 
 #### 错误传播
